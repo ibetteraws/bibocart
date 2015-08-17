@@ -159,7 +159,7 @@ $markers = array();
                                     <button onclick="initialize(<?php echo $storeLat ;?>, <?php echo $storeLong ;?>, <?php echo $storeRadius ;?>, <?php echo $storeZoomLevel ;?>, '<?php echo $storeName ;?>', 'store-list-map-canvas');" class="button" title="<?php echo Mage::helper('clarion_storelocator')->__('View Map') ?>" type="button">
                                         <span>
                                             <span>
-                                            <?php echo Mage::helper('clarion_storelocator')->__('View Map') ?>
+                                               <?php echo Mage::helper('clarion_storelocator')->__('View Map') ?>
                                             </span>
                                         </span>
                                     </button>
@@ -167,7 +167,6 @@ $markers = array();
                                 </td>
                             </tr>
                         </table>
-                        
                    </td>
                </tr>
          </table>
@@ -221,9 +220,9 @@ $markers = array();
     //<![CDATA[
         var addressSearch = new VarienForm('addressSearch', true);
     //]]>
-    </script>
-    <script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false">
- </script>
+</script>
+<script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
   <script>
       //<![CDATA[
     var googleMapDivId = 'store-list-map-canvas';

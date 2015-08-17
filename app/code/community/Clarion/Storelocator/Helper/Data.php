@@ -1,7 +1,7 @@
 <?php
 /**
  * Store locator data helper
- * 
+ *
  * @category    Clarion
  * @package     Clarion_Storelocator
  * @author      Clarion Magento Team
@@ -14,36 +14,36 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
      * @var string
      */
     const XML_PATH_ENABLED = 'clarion_storelocator_general_setting/clarion_storelocator_status/enable';
-    
+
     /**
      * Default radius
      *
      * @var string
      */
     const XML_PATH_DEFAULT_RADIUS = 'clarion_storelocator_general_setting/clarion_storelocator_display_setting/default_radius';
-    
-    
+
+
     /**
      * Default zoom level
      *
      * @var string
      */
     const XML_PATH_DEFAULT_ZOOM_LEVEl = 'clarion_storelocator_general_setting/clarion_storelocator_display_setting/zoom_level';
-    
+
     /**
      * Default stores per page
      *
      * @var string
      */
     const XML_PATH_STORES_PER_PAGE = 'clarion_storelocator_general_setting/clarion_storelocator_display_setting/stores_per_page';
-    
+
     /**
      * Store view instance for lazy loading
      *
      * @var clarion_storelocator_model_storelocator
      */
     protected $_storeViewInstance;
-    
+
     /**
      * Checks whether news can be displayed in the frontend
      *
@@ -54,7 +54,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfigFlag(self::XML_PATH_ENABLED, $store);
     }
-    
+
     /**
      * Return current store instance from the Registry
      *
@@ -72,7 +72,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
 
         return $this->_storeViewInstance;
     }
-    
+
     /**
      * Return radius configured from admin
      *
@@ -83,7 +83,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return abs(Mage::getStoreConfig(self::XML_PATH_DEFAULT_RADIUS, $store));
     }
-    
+
     /**
      * Return zoom level configured from admin
      *
@@ -94,7 +94,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return abs((int)Mage::getStoreConfig(self::XML_PATH_DEFAULT_ZOOM_LEVEl, $store));
     }
-    
+
     /**
      * Return the number of stores per page
      *
@@ -105,7 +105,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return abs((int)Mage::getStoreConfig(self::XML_PATH_STORES_PER_PAGE, $store));
     }
-    
+
     /**
      * Retrieve store search form post url
      *
@@ -115,7 +115,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return $this->_getUrl('storelocator/index/search');
     }
-    
+
     /**
      * Get country name by county code
      * @param string $countryCode country code
@@ -126,7 +126,7 @@ class Clarion_Storelocator_Helper_Data extends Mage_Core_Helper_Abstract
         $countryModel = Mage::getModel('directory/country')->loadByCode($countryCode);
         return $countryName = $countryModel->getName();
     }
-    
+
     /**
      * Maximum size of uploaded files.
      *
